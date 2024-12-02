@@ -171,10 +171,10 @@ const SearchExercises = ({ setExercises, bodyPart, setBodyPart }) => {
         style={{
           fontWeight: '700',
           width: '100%',
-          maxWidth: '200px',
+          maxWidth: '170px',
           backgroundColor: '#fff',
           borderRadius: '8px',
-          marginRight: '8px',
+          marginRight: '5px',
           height: '40px',
           justifyContent: 'center',
          
@@ -184,6 +184,28 @@ const SearchExercises = ({ setExercises, bodyPart, setBodyPart }) => {
         placeholder ="Search Exercises"
         type="text"
       />
+      <div>
+  <select
+    style={{
+      padding: '8px',
+      borderRadius: '8px',
+      fontSize: '14px',
+      marginRight: '5px',
+      height: '40px',
+      width: '100%',
+      maxWidth: '40px',
+    }}
+    value={bodyPart} // Controlled input for body part selection.
+    onChange={(e) => setBodyPart(e.target.value)}
+  >
+    {bodyParts.map((part) => (
+      <option key={part} value={part}>
+        {part}
+      </option>
+    ))}
+  </select>
+</div>
+
       <Button
         style={{
           backgroundColor: '#FF2625',
@@ -197,7 +219,9 @@ const SearchExercises = ({ setExercises, bodyPart, setBodyPart }) => {
       >
         Search
       </Button>
+      
     </div>
+    
   );
 };
 

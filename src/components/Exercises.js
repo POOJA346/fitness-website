@@ -24,7 +24,7 @@ const Exercises = ({ exercises, setExercises, bodyPart }) => {
     };
 
     fetchExercisesData();
-  }, [bodyPart]);
+  }, [bodyPart, setExercises]);
 
   // Pagination
   const indexOfLastExercise = currentPage * exercisesPerPage;
@@ -40,13 +40,13 @@ const Exercises = ({ exercises, setExercises, bodyPart }) => {
   if (!currentExercises.length) return <Loader />;
 
   return (
-    <Box id="exercises" sx={{ mt: { lg: '25px' } }} mt="40px" p="20px">
+    <Box id="exercises" sx={{ mt: { lg: '-10px' } }} mt="28px" p="20px">
       <Typography
   variant="h4"
   fontWeight="bold"
   color="white"
   sx={{
-    fontSize: { lg: '34px', xs: '20px' },
+    fontSize: { lg: '31px', xs: '20px' },
    
     textAlign: 'left', 
     fontFamily: "'Alegreya",
@@ -54,7 +54,7 @@ const Exercises = ({ exercises, setExercises, bodyPart }) => {
     letterSpacing: '0.5px', 
     textTransform: 'capitalize', 
   }}
-  mb="46px"
+  mb="28px"
 >
 Showing Results
 </Typography>
@@ -64,7 +64,7 @@ Showing Results
           <ExerciseCard key={idx} exercise={exercise} />
         ))}
       </Stack>
-      <Stack sx={{ mt: { lg: '114px', xs: '70px' } }} alignItems="center">
+      <Stack sx={{ mt: { lg: '0px', xs: '70px' } }} mb='19px' alignItems="center">
         {exercises.length > 9 && (
           <Pagination
             color="standard"
@@ -75,6 +75,7 @@ Showing Results
             onChange={paginate}
             size="large"
           />
+        
         )}
       </Stack>
     </Box>

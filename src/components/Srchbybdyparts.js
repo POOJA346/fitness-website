@@ -1,5 +1,5 @@
-import React, { useEffect, useState } from 'react';
-import { Box, Button, Stack, TextField, Typography } from '@mui/material';
+/*import React, { useEffect, useState } from 'react';
+import { Box, Stack, Typography } from '@mui/material';
 
 import { exerciseOptions, fetchData } from '../utils/fetchData';
 import HorizontalScrollbar from './HorizontalScrollbar';
@@ -56,6 +56,52 @@ const Srchbybdyparts = ({ setExercises, bodyPart, setBodyPart }) => {
 </Typography>
 
       
+      <Box sx={{ position: 'relative', width: '100%', p: '20px' }}>
+        <HorizontalScrollbar data={bodyParts} bodyParts setBodyPart={setBodyPart} bodyPart={bodyPart} />
+      </Box>
+    </Stack>
+  );
+};
+
+export default Srchbybdyparts;*/
+
+import React, { useEffect, useState } from 'react';
+import { Box, Stack, Typography } from '@mui/material';
+
+import { exerciseOptions, fetchData } from '../utils/fetchData';
+import HorizontalScrollbar from './HorizontalScrollbar';
+
+const Srchbybdyparts = ({ setExercises, bodyPart, setBodyPart }) => {
+  const [bodyParts, setBodyParts] = useState([]);
+
+  useEffect(() => {
+    const fetchExercisesData = async () => {
+      const bodyPartsData = await fetchData('https://exercisedb.p.rapidapi.com/exercises/bodyPartList', exerciseOptions);
+      setBodyParts(['all', ...bodyPartsData]);
+    };
+
+    fetchExercisesData();
+  }, []);
+
+  return (
+    <Stack mt="15px" p="20px">
+      <Typography
+        variant="h4"
+        fontWeight="bold"
+        color="white"
+        sx={{
+          fontSize: { lg: '31px', xs: '20px' },
+          textAlign: 'left',
+          fontFamily: "'Alegreya",
+          lineHeight: '1.5',
+          letterSpacing: '0.5px',
+          textTransform: 'capitalize',
+        }}
+        mb="5px"
+      >
+        Search Exercises by Body Parts
+      </Typography>
+
       <Box sx={{ position: 'relative', width: '100%', p: '20px' }}>
         <HorizontalScrollbar data={bodyParts} bodyParts setBodyPart={setBodyPart} bodyPart={bodyPart} />
       </Box>

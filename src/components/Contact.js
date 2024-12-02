@@ -40,7 +40,7 @@ const Contact = () => {
         <div className="contact-icons">
           <a href="https://www.facebook.com/profile.php?id=100038397635748" className="icon"><FaFacebook /></a>
           <a href="https://www.instagram.com/_p00ja_yadav/" className="icon"><FaInstagram /></a>
-          <a href="#" className="icon"><FaTwitter /></a>
+          <a href="https://x.com/?lang=en" className="icon"><FaTwitter /></a>
           <a href="https://www.linkedin.com/in/pooja-kumari-bb6993224/" className="icon"><FaLinkedin /></a>
         </div>
       </div>

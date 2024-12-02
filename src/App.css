@@ -64,8 +64,8 @@ body {
   }*/
   
   .exercise-card {
-    width: 400px;
-    height: 445px;
+    width: 350px;
+    height: 400px;
     background: #fff;
     border-top: 4px solid #FF2625;
     border-bottom-left-radius: 20px;
@@ -76,16 +76,19 @@ body {
     padding-bottom: 10px;
     transform: scale(1, 1);
     transition: 0.3s all ease-in-out;
+    margin-left: -38px;
     
   }
   
   .exercise-card img {
-    height: 326px;
+    height: 310px;
+    
   }
   
   .bodyPart-card {
     transform: scale(1, 1);
     transition: 0.3s all ease-in-out;
+  
     
   }
   
@@ -103,9 +106,10 @@ body {
     display: flex;
     flex-direction: column;
     gap: 24px;
-    width: 387px;
-    height: 381px;
+    width: 210px;
+    height: 220px;
     text-decoration: none;
+    margin-bottom: 80px;
   }
   
   @media screen and (max-width:1200px) {
@@ -416,6 +420,7 @@ body {
   text-align: center;
   font-family: 'Arial', sans-serif;
   animation: fadeIn 1s ease-in-out;
+
 }
 
 /* Input and Label Styling */
@@ -529,7 +534,8 @@ input:focus {
   align-items: center;
   gap: 3rem;
   padding-left: 30px;
-  margin-top: 130px;
+  margin-top: 90px;
+  margin-bottom: -70px;
 }
 
 .contact-text h2{

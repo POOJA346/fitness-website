@@ -7,26 +7,26 @@ const BodyPart = ({ item, setBodyPart, bodyPart }) => (
     type="button"
     alignItems="center"
     justifyContent="center"
-   
+    
     className="bodyPart-card"
    
     sx={bodyPart === item ? { 
       borderTop: '4px solid #FF2625',
        background: '#fff', 
        borderBottomLeftRadius: '20px', 
-       width: '270px',
-        height: '282px',
+       width: '210px',
+        height: '220px',
          cursor: 'pointer', 
-         gap: '17px',
+         gap: '12px',
          ml: '-30px',
         mr: '-35px'
          } : { 
           background: '#fff', 
           borderBottomLeftRadius: '20px', 
-          width: '270px',
-           height: '282px',
+          width: '210px',
+           height: '220px',
             cursor: 'pointer', 
-            gap: '17px' ,
+            gap: '12px' ,
            mr: '-35px'
             
           }}

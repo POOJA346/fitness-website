@@ -6,13 +6,13 @@ const ExerciseVideos = ({ exerciseVideos, name }) => {
   if (!exerciseVideos.length) return <Loader />;
 
   return (
-    <Box sx={{ marginTop: { lg: '203px', xs: '80px' } }} p="20px">
-      <Typography sx={{ fontSize: { lg: '34px', xs: '20px' } }} fontWeight={700} color={'white'} mb="33px">
+    <Box sx={{ marginTop: { lg: '140px', xs: '80px' } }} p="20px">
+      <Typography sx={{ fontSize: { lg: '31px', xs: '20px' } }} fontWeight={700} color={'white'} mb="33px">
         Watch <span style={{ color: 'violet', textTransform: 'capitalize' }}>{name}</span> exercise videos
       </Typography>
       <Stack
   sx={{lg:{flexDirection: 'row', // Force all items in a row
-    gap: '80px', // Maintain spacing between items
+    gap: '20px', // Maintain spacing between items
     flexWrap: 'nowrap', // Prevent wrapping
     overflowX: 'auto', // Allow horizontal scrolling if needed
     alignItems: 'center',}
